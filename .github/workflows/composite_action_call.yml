@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: actions-say-hello
-        uses: akbast/actions-composite@v1.1
+        uses: akbas-orga/actions-composite@v1.1
         with:
           person: ${{ env.PERSON }}
