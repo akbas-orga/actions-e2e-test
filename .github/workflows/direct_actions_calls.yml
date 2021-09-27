@@ -1,6 +1,8 @@
 name: 'Run Custom Actions Directly'
 on: 
   push:
+    paths: 
+      - '.github/workflows/direct_actions_calls.yml'
   workflow_dispatch:
 
 env:
