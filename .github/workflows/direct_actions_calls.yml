@@ -1,0 +1,26 @@
+name: 'Run Custom Actions Directly'
+on: 
+  push:
+  workflow_dispatch:
+
+env:
+  PERSON: "Mono The Octocat"
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A Job To Greet
+    steps:
+      - uses: actions/checkout@v2
+      - id: actions-say-hello
+        uses: akbast/actions-say-hello@v1
+        with:
+          who-to-greet: ${{ env.PERSON }}
+      #- run: echo random-number ${{ steps.actions-say-hello.outputs.random-number }}
+      #  shell: bash
+      - id: actions-say-goodbye
+        uses: akbast/actions-say-goodbye@v1
+        with:
+          who-to-say-goodbye: ${{ env.PERSON }}
+      #- run: echo random-number ${{ steps.aactions-say-goodbye.outputs.random-number }}
+      #  shell: bash
