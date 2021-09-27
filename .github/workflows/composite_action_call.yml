@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
       - id: actions-say-hello
         uses: akbas-orga/actions-composite@v1
         with:
