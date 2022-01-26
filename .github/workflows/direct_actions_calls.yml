@@ -24,3 +24,5 @@ jobs:
           who-to-say-goodbye: ${{ env.PERSON }}
       #- run: echo random-number ${{ steps.aactions-say-goodbye.outputs.random-number }}
       #  shell: bash
+
+
